@@ -51,9 +51,11 @@
       </div>
     </div>
     <script>
+      let fundo = document.getElementById("fundo")
       let sim = document.getElementById("sim")
       let nao = document.getElementById("nao")
       let gradecida = document.getElementById("gradecida")
+      let regeicao = 0 
       
       function lele(){
        let min = -50
@@ -62,6 +64,10 @@
        let ale2 = Math.round(Math.random() * (max - min) + min)
        nao.style.left = ale1 + "vh"
        nao.style.top = ale2 + "vh"
+       regeicao++
+       if (regeicao >= 10){
+         fundo.style.backgroundImage = 'url("fungirl.jpg")'
+       }
       }
       
       function lala(){
