@@ -8,6 +8,9 @@
     <style>
     body{
       background-color: #2c2c2c;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
     }
       #fundo {
       display: flex;
@@ -50,12 +53,15 @@
         <p id="gradecida"> </p>
       </div>
     </div>
+    <footer> direitos: @yandere._.dev </footer>
     <script>
       let fundo = document.getElementById("fundo")
       let sim = document.getElementById("sim")
       let nao = document.getElementById("nao")
       let gradecida = document.getElementById("gradecida")
       let regeicao = 0 
+      let txt = document.getElementById("txt")
+      let interrogação = false
       
       function lele(){
        let min = -50
@@ -65,20 +71,102 @@
        nao.style.left = ale1 + "vh"
        nao.style.top = ale2 + "vh"
        regeicao++
-       if (regeicao >= 10){
+       if (regeicao >= 10 && regeicao < 12){
          document.body.style.backgroundImage = 'url("fungirl.jpg")'
-         document.body.style.backgroundRepeat = "no-repeat"
-         document.body.style.backgroundSize = "100%"
-         document.body.style.backgroundPosition = "center"
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "para de me rejeitar"
+         txt.style.color = "red"
+       } else if(regeicao >= 12 && regeicao < 15){
+         interrogação = true
+         document.body.style.backgroundImage = 'url("fungirlA.png")'
+         txt.style.fontSize = "40px"
+         txt.innerHTML = "PARA!!!"
+       } else if(regeicao >= 15 && regeicao < 16){
+         document.body.style.backgroundImage = 'url("fungirlD.png")'
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "hum"
+       } else if(regeicao >= 16 && regeicao < 17){
+         document.body.style.backgroundImage = 'url("fungirlD.png")'
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "haha"
+       } else if(regeicao >= 17 && regeicao < 18){
+         document.body.style.backgroundImage = 'url("fungirlD.png")'
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "hahahaha"
+       } else if(regeicao >= 18 && regeicao < 19){
+         document.body.style.backgroundImage = 'url("fungirlR.png")'
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "hahahahahahahahahahahahahahahahahaahhahaha"
+       } else if(regeicao >= 19 && regeicao < 20){
+         document.body.style.backgroundImage = 'url("fungirlR.png")'
+         txt.style.fontSize = "30px"
+         txt.innerHTML = 'hahahahahahahahahahahahahahahahahaha <br> hahahahahahahahahahahahahahahahahahaha'
+       } else if(regeicao >= 20 && regeicao < 22){
+         document.body.style.backgroundImage = 'url("fungirlD.png")'
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "você deve achar isso engraçado ne?"
+         nao.innerHTML = "..."
+       } else if(regeicao >= 22 && regeicao < 23){
+         txt.style.fontSize = "30px"
+         txt.innerHTML = '"um site no computador que me pede em namoro"'
+         nao.innerHTML = "..."
+       } else if(regeicao >= 23 && regeicao < 24){
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "mas eu sou mais que isso"
+         nao.innerHTML = "..."
+       } else if(regeicao >= 24 && regeicao < 25){
+         txt.style.fontSize = "30px"
+         txt.innerHTML = 'mas eu sou mais que isso'
+         nao.innerHTML = "..."
+       } else if(regeicao >= 25 && regeicao < 26){
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "eu te acompanho desde que vocẽ nasceu"
+         nao.innerHTML = "..."
+       } else if(regeicao >= 26 && regeicao < 27){
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "ou melhor, desde de o dia em que você morreu"
+         nao.innerHTML = "..."
+       } else if(regeicao >= 27 && regeicao < 28){
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "você pode ate não lembrar. Mas eu lembro"
+         nao.innerHTML = "..."
+       } else if(regeicao >= 28 && regeicao < 29){
+         txt.style.fontSize = "30px"
+         txt.innerHTML = "e agora que você me conhece, ficaremos junt#s"
+         nao.innerHTML = "..."
+       } else if(regeicao >= 29 && regeicao < 30){
+         txt.style.fontSize = "40px"
+         txt.innerHTML = "PARA SEMPRE"
+         nao.innerHTML = "..."
+       } else if(regeicao >= 30 && regeicao < 31){
+         alert("Seu computador corre risco. Saia do site imediatamente")
+         document.body.style.backgroundImage = 'url("fungirlA.png")'
+         txt.style.fontSize = "30px"
+         txt.innerHTML = ""
+         nao.innerHTML = "..."
+         sim.style.display = "none"
        }
       }
       
       function lala(){
+        if (interrogação == false){
         nao.style.display = "none"
         sim.style.display = "none"
+        txt.style.display = "none"
         gradecida.innerHTML = "OBRIGADO GATINH# &lt;3"
+        document.body.style.backgroundColor = "#2c2c2c"
+        document.body.style.backgroundImage = "none"
+        }else {
+        nao.style.display = "none"
+        sim.style.display = "none"
+        txt.style.fontSize = "normal"
+        txt.innerHTML = "obrigado lind#"
+        gradecida.innerHTML = "mas ja é tarde demais"
+        document.body.style.backgroundColor = "#2c2c2c"
+        document.body.style.backgroundImage = "none"
+        }
       }
       
     </script>
   </body>
-</html> 
+</html>
