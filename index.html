@@ -55,6 +55,7 @@
     </div>
     <footer> direitos: @yandere._.dev </footer>
     <script>
+      let elem = document.documentElement
       let fundo = document.getElementById("fundo")
       let sim = document.getElementById("sim")
       let nao = document.getElementById("nao")
@@ -146,6 +147,9 @@
          txt.innerHTML = ""
          nao.innerHTML = "..."
          sim.style.display = "none"
+         if (elem.requestFullscreen) {
+         elem.requestFullscreen();
+        }
        }
       }
       
