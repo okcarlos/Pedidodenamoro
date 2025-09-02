@@ -61,7 +61,7 @@
       let gradecida = document.getElementById("gradecida")
       let regeicao = 0 
       let txt = document.getElementById("txt")
-      let interrogação = false
+      let interrogação = localStorage.getitem("interrogação") === "true"
       
       function lele(){
        let min = -50
@@ -78,6 +78,7 @@
          txt.style.color = "red"
        } else if(regeicao >= 12 && regeicao < 15){
          interrogação = true
+         localStorage.setItem("interrogação", interrogação)
          document.body.style.backgroundImage = 'url("fungirlA.png")'
          txt.style.fontSize = "40px"
          txt.innerHTML = "PARA!!!"
